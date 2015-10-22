@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5c377cfb989ef8b4bb8358c2e39aca9a
-timeCreated: 1444962459
+timeCreated: 1445101564
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -69,7 +69,7 @@ TextureImporter:
         width: 66
         height: 159
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_1
       rect:
@@ -79,25 +79,25 @@ TextureImporter:
         width: 14
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_2
       rect:
         serializedVersion: 2
         x: 90
-        y: 161
+        y: 253
         width: 102
-        height: 262
+        height: 170
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 89, z: 0, w: 0}
+      border: {x: 0, y: 2, z: 0, w: 0}
     - name: Projeto-fogo_3
       rect:
         serializedVersion: 2
         x: 208
-        y: 158
-        width: 126
-        height: 260
+        y: 250
+        width: 107
+        height: 168
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 88, z: 15, w: 0}
@@ -109,18 +109,18 @@ TextureImporter:
         width: 107
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_5
       rect:
         serializedVersion: 2
         x: 427
-        y: 150
+        y: 253
         width: 113
-        height: 267
+        height: 164
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 98, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_6
       rect:
         serializedVersion: 2
@@ -129,7 +129,7 @@ TextureImporter:
         width: 88
         height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_7
       rect:
@@ -139,7 +139,7 @@ TextureImporter:
         width: 11
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_8
       rect:
@@ -149,7 +149,7 @@ TextureImporter:
         width: 70
         height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_9
       rect:
@@ -159,7 +159,7 @@ TextureImporter:
         width: 4
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Projeto-fogo_10
       rect:
@@ -169,7 +169,7 @@ TextureImporter:
         width: 5
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
