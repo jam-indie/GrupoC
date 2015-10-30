@@ -16,7 +16,9 @@ public class Instantiate : MonoBehaviour
 	public Transform bloco8;
 
 	Transform blocoSurpresa;
+
 	public int numBlc;
+	public float spaceBetweenBlocs;
 	public Vector3 reg;
 	bool create;
 
@@ -55,7 +57,7 @@ public class Instantiate : MonoBehaviour
 
 			SpriteRenderer tam;
 			tam = blocoSurpresa.FindChild("Fundo").GetComponent<SpriteRenderer>();
-			reg.x = transform.position.x + (4*tam.bounds.extents.x);
+			reg.x = transform.position.x + (spaceBetweenBlocs*tam.bounds.extents.x);
 			Instantiate(blocoSurpresa,reg, Quaternion.identity);
 			create = true;
 		}

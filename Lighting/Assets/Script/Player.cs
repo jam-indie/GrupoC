@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
 	Animator anim;
 	Rigidbody2D rb2D;
+	BoxCollider2D box;
+	SpriteRenderer sp;
 	public Status actions = Status.running;
 
 	// Use this for initialization
@@ -26,6 +28,8 @@ public class Player : MonoBehaviour
 	{
 		anim = GetComponent<Animator>();
 		rb2D = GetComponent<Rigidbody2D>();
+		box = GetComponent<BoxCollider2D>();
+		sp = GetComponent<SpriteRenderer>();
 		oriSpeed = speed;
 		oriTimeForJump = timeForJump;
 		timeForLanding = oriTimeForJump;
@@ -35,34 +39,35 @@ public class Player : MonoBehaviour
 	void Update () 
 	{
 		transform.Translate(speed*Time.deltaTime, 0,0);
-		
+		box.size = sp.bounds.size;
 		//testa o click do mouse e se o chão está verdadeiro
 		if(Input.GetKeyDown(jump) && inGround)
 			actions = Status.jumping;
 
 		switch(actions)
 		{
-		case Status.running:
-			anim.SetBool("running",true);
-			anim.SetBool("jumping",false);
+			case Status.running:
+				anim.SetBool("running",true);
+				anim.SetBool("jumping",false);
 			break;
 			
-		case Status.jumping:
-			
-			anim.SetBool("running",false);
-			anim.SetBool("jumping",true);
-			
-			if(anim.GetBool("jumping") && inGround)
-			{
-				timeForJump -= Time.deltaTime;
-				speed = 0;
-				if(timeForJump < 0)
+			case Status.jumping:
+				anim.SetBool("running",false);
+				anim.SetBool("jumping",true);
+				
+				
+				if(anim.GetBool("jumping") && inGround)
 				{
-					rb2D.MovePosition(rb2D.position + (Vector2.up*strong) * Time.deltaTime);
-					speed = oriSpeed;
-					//rb2D.AddForce(Vector3.up*strong, ForceMode2D.Impulse);	//adiciona força para a subida do personagem
+					timeForJump -= Time.deltaTime;
+					speed = 0;
+					if(timeForJump < 0)
+					{
+						rb2D.MovePosition(rb2D.position + (Vector2.up*strong) * Time.deltaTime);
+						speed = oriSpeed;
+						
+						//rb2D.AddForce(Vector3.up*strong, ForceMode2D.Impulse);	//adiciona força para a subida do personagem
+					}
 				}
-			}
 			break;
 		}
 		if(inGround && !landing)
